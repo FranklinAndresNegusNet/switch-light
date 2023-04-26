@@ -1,0 +1,56 @@
+/*to add support for a dark theme to your CSS*/
+:root { /*El selector :root representa el elemento <html> en la página HTML. Para este tipo de tarea, la mejor práctica consiste en definir un conjunto de variables CSS globales en una regla CSS con el selector :root:*/
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+
+
+body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+li { /*classes can be used to style multiple elements.*/
+    list-style: circle;
+}
+
+.list { /*es un selector de clase. Cada elemento HTML que contenga un atributo class definido como list obtendrá los estilos definidos en este selector.*/
+    list-style: square;
+}
+
+
+.light-theme {
+    --bg: var(--light);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme { /*bg and fontColor, which specify a background and font color.*/
+    --bg: var(--black); /*var para establecer los valores de sus propiedades en las variables especificadas previamente en su selector :root.*/
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+
+
+
+
+
+
